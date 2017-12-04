@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "IoTLT アドベントカレンダー2017用",
   "repository": {
-      "type" : "git",
-      "url" : "https://github.com/tai-sho/adv-iotlt-santa-detection"
+    "type": "git",
+    "url": "https://github.com/tai-sho/adv-iotlt-santa-detection"
   },
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "license": "MIT",
   "keywords": [],
   "dependencies": {
-    "@google-cloud/vision": "^0.13.0",
+    "google-cloud": "^0.57.0",
     "node-slack-upload": "^1.2.1"
   },
   "config": {
