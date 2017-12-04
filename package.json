@@ -1,0 +1,28 @@
+{
+  "name": "santa-detection",
+  "version": "1.0.0",
+  "description": "IoTLT アドベントカレンダー2017用",
+  "repository": {
+      "type" : "git",
+      "url" : "https://github.com/tai-sho/adv-iotlt-santa-detection"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": {
+    "name": "ShoheiTai",
+    "url": "http://tech-style.info"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "dependencies": {
+    "@google-cloud/vision": "^0.13.0",
+    "node-slack-upload": "^1.2.1"
+  },
+  "config": {
+    "slack_api_token": "",
+    "gcloud_service_account_file": "/path/to/service-account.json",
+    "gcloud_project_id": "hoge-gcloud-project-id"
+  }
+}
