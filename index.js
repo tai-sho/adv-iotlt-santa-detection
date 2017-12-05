@@ -5,6 +5,7 @@ const GCLOUD_PROJECT_ID = process.env.npm_package_config_gcloud_project_id
 const SLACK_API_TOKEN = process.env.npm_package_config_slack_api_token
 const SLACK_CHANNEL = '@shouhei.tai'
 const IMAGE_FILE_PATH = './captured.jpeg'
+const DETECTION_ENTITY_ID = '/m/027g6wt'
 
 const webcam = spawn('fswebcam', ['-D', '2', '-r', '1280x720', IMAGE_FILE_PATH])
 webcam.on('close', code => {
@@ -23,8 +24,7 @@ function labelDetection() {
     .then((results) => {
       const labels = results[0].labelAnnotations
       labels.some(label => {
-        console.log(label)
-        if(label.mid === '/m/027g6wt') {
+        if(label.mid === DETECTION_ENTITY_ID) {
           sendSlack()
           return true
         }
